@@ -1,2 +1,2 @@
-# reast-cancer-prediction
-A machine learning project for breast cancer prediction using Docker and Flask
+# Breast-cancer-prediction
+A machine learning project for breast cancer prediction using Python, Docker and Flask
