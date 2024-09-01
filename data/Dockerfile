@@ -5,7 +5,7 @@ FROM jupyter/minimal-notebook:latest
 WORKDIR /home/jovyan/work
 
 # Copy the content of your notebook directory to the working directory
-COPY ../notebooks/breast_cancer_prediction.ipynb .
+COPY notebooks/breast_cancer_prediction.ipynb .
 
 
 # Expose the port Jupyter Notebook will run on
