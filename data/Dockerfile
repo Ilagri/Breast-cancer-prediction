@@ -1,5 +1,5 @@
 # Use the official Jupyter Notebook image as the base image
-FROM jupyter/scipy-notebook:latest
+FROM jupyter/minimal-notebook:latest
 
 # Set the working directory inside the container
 WORKDIR /home/jovyan/work
