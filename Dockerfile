@@ -7,6 +7,11 @@ WORKDIR /home/jovyan/work
 # Copy the notebook from the 'notebooks' directory to the working directory
 COPY notebooks/breast_cancer_prediction.ipynb .
 
+# Copy requirements.txt and install dependencies, then clean up
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt && \
+    rm -rf /root/.cache/pip
+
 # Expose the port Jupyter Notebook will run on
 EXPOSE 8888
 
