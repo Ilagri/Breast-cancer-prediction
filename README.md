@@ -56,6 +56,7 @@ If you don't have pip installed, you can follow the instructions [here](https://
 After installing the necessary dependencies, you can run the Jupyter Notebook to explore the code, run experiments, and view the results.
 
 ### Running Jupyter Notebook
+
 To start the Jupyter Notebook server, run the following command:
 
 ```bash
@@ -71,21 +72,27 @@ To simplify running the project and avoid dependency issues, you can use [Play w
 Ensure you have a [Play with Docker](https://labs.play-with-docker.com/) account. No local Docker installation is necessary.
 
 ### Steps to Run with Play with Docker
+
 1. **Start a New Session**: Go to [Play with Docker](https://labs.play-with-docker.com/) and start a new session by clicking "Start".
+
 2. **Add a New Instance**: Once your session has started, add a new instance by clicking on the "ADD NEW INSTANCE" button. This will create a new terminal instance where you can run Docker commands.
+   
 3. **Clone the Repository**: In the Play with Docker terminal, clone the repository and navigate to the correct directory:
 ```bash
 git clone https://github.com/Ilagri/Breast-cancer-prediction.git
 cd Breast-cancer-prediction
 ```
+
 4. **Build the Docker Image**: Build the Docker image using the provided Dockerfile:
 ```bash
 docker build -t breast-cancer-prediction .
 ```
+
 5. **Run the Docker Container**: Start the Docker container, mapping the container's port to the local machine:
 ```bash
 docker run -p 8888:8888 breast-cancer-prediction
 ```
+
 6. **Access Jupyter Notebook**:
 - In Play with Docker, once the container is running, you'll see a 8888 link next to the instance name in the interface.
 - Click on the 8888 link. This will open a new browser tab where you'll be prompted to insert the Jupyter token.
@@ -106,19 +113,24 @@ Breast-cancer-prediction/
 Contributions are welcome! Please follow these steps to contribute:
 
 1. **Fork the repository**: Click the "Fork" button at the top-right corner of this page to create a copy of this repository under your GitHub account.
+   
 2. **Create a new branch**:
   ```bash
   git checkout -b feature-name
   ```
+
 3. **Make your changes**: Implement your changes or additions.
+   
 4. **Commit your changes**:
   ```bash
   git commit -m 'Add some feature'
   ```
+
 5. **Push to the branch**:
   ```bash
   git push origin feature-name
   ```
+
 6. **Open a pull request**: Go to your forked repository on GitHub, click on the "Pull Request" button, and provide a description of your changes.
 
 ## License
