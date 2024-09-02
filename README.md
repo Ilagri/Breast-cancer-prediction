@@ -76,7 +76,7 @@ A [Play with Docker](https://labs.play-with-docker.com/) account. No local Docke
 ### Steps to Run with Play with Docker
 You have two options to run the project using Docker:
 
-####Option 1: Build Locally
+#### Option 1: Build Locally
 
 1. **Start a New Session**: Go to [Play with Docker](https://labs.play-with-docker.com/) and click "Start".
 
@@ -101,7 +101,7 @@ docker run -p 8888:8888 breast-cancer-prediction
 6. **Access Jupyter Notebook**:
 Click the 8888 link in [Play with Docker](https://labs.play-with-docker.com/) to open the notebook interface. Use the token from the terminal if prompted.
 
-####Option 2: Pull from Docker Hub
+#### Option 2: Pull from Docker Hub
 
 1. **Start a New Session**: Go to [Play with Docker](https://labs.play-with-docker.com/) and click "Start".
 
