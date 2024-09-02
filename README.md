@@ -71,30 +71,22 @@ To simplify running the project and avoid dependency issues, you can use [Play w
 Ensure you have a [Play with Docker](https://labs.play-with-docker.com/) account. No local Docker installation is necessary.
 
 ### Steps to Run with Play with Docker
-
-#### 1. Start a New Session
-Go to [Play with Docker](https://labs.play-with-docker.com/) and start a new session by clicking "Start".
-
-#### 2. Add a New Instance
-Once your session has started, add a new instance by clicking on the "ADD NEW INSTANCE" button. This will create a new terminal instance where you can run Docker commands.
-
-#### 3. Clone the Repository
-In the Play with Docker terminal, clone the repository and navigate to the correct directory:
+1. **Start a New Session**: Go to [Play with Docker](https://labs.play-with-docker.com/) and start a new session by clicking "Start".
+2. **Add a New Instance**: Once your session has started, add a new instance by clicking on the "ADD NEW INSTANCE" button. This will create a new terminal instance where you can run Docker commands.
+3. **Clone the Repository**: In the Play with Docker terminal, clone the repository and navigate to the correct directory:
 ```bash
 git clone https://github.com/Ilagri/Breast-cancer-prediction.git
 cd Breast-cancer-prediction
 ```
-#### 4. Build the Docker Image
-Build the Docker image using the provided Dockerfile:
+4. **Build the Docker Image**: Build the Docker image using the provided Dockerfile:
 ```bash
 docker build -t breast-cancer-prediction .
 ```
-#### 5. Run the Docker Container
-Start the Docker container, mapping the container's port to the local machine:
+5. **Run the Docker Container**: Start the Docker container, mapping the container's port to the local machine:
 ```bash
 docker run -p 8888:8888 breast-cancer-prediction
 ```
-#### 6. Access Jupyter Notebook
+6. **Access Jupyter Notebook**:
 - In Play with Docker, once the container is running, you'll see a 8888 link next to the instance name in the interface.
 - Click on the 8888 link. This will open a new browser tab where you'll be prompted to insert the Jupyter token.
 - The token can be found in the terminal output where you started the Docker container. Copy the token and paste it into the prompt in the new tab.
@@ -113,32 +105,28 @@ Breast-cancer-prediction/
 ## Contributing
 Contributions are welcome! Please follow these steps to contribute:
 
-1. ***Fork the repository***: Click the "Fork" button at the top-right corner of this page to create a copy of this repository under your GitHub account.
-2. ***Create a new branch***:
+1. **Fork the repository**: Click the "Fork" button at the top-right corner of this page to create a copy of this repository under your GitHub account.
+2. **Create a new branch**:
   ```bash
   git checkout -b feature-name
   ```
-3. ***Make your changes***: Implement your changes or additions.
-4. ***Commit your changes***:
+3. **Make your changes**: Implement your changes or additions.
+4. **Commit your changes**:
   ```bash
   git commit -m 'Add some feature'
   ```
-5. ***Push to the branch***:
+5. **Push to the branch**:
   ```bash
   git push origin feature-name
   ```
-6. ***Open a pull request***: Go to your forked repository on GitHub, click on the "Pull Request" button, and provide a description of your changes.
+6. **Open a pull request**: Go to your forked repository on GitHub, click on the "Pull Request" button, and provide a description of your changes.
 
 ## License
 This project is licensed under the MIT License - see the [LICENCE](https://github.com/Ilagri/Breast-cancer-prediction/blob/main/LICENSE) file for details.
 
 ## Acknowledgements
-
 - **Dataset:** The Breast Cancer Wisconsin (Diagnostic) Dataset was created by Dr. William H. Wolberg, a physician at the University of Wisconsin-Madison, and it has been widely used for research and educational purposes. The dataset is publicly available through the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29).
-- **Citation:** W. H. Wolberg, W. N. Street, and O. L. Mangasarian. (1992). "Breast Cancer Wisconsin (Diagnostic) Data Set". UCI Machine Learning Repository.
-
+***Citation:*** W. H. Wolberg, W. N. Street, and O. L. Mangasarian. (1992). "Breast Cancer Wisconsin (Diagnostic) Data Set". UCI Machine Learning Repository.
 - **Mentorship and Feedback:** A special thanks to Dr. Veronica Maidel for her invaluable feedback and mentoring throughout this project.
-
-- Special thanks to the open-source community for providing the tools and libraries that made this project possible.
+- Thanks to the open-source community for providing the tools and libraries that made this project possible.
 - Inspiration and guidance were drawn from various tutorials, research papers, and online courses.
-
