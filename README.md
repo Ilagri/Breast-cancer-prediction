@@ -6,7 +6,7 @@ This project is currently under development. Contributions and feedback are welc
 
 # Overview
 
-This project utilizes machine learning techniques to predict the likelihood of breast cancer based on a dataset of features extracted from medical imaging. The project includes a Jupyter Notebook that covers data preprocessing, model training, evaluation, and predictions. The environment is fully Dockerized for ease of replication and deployment.
+This project uses machine learning to predict breast cancer likelihood based on features from medical imaging. It includes a Jupyter Notebook for model development and a Flask web application for serving the model as an API or web interface.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -15,6 +15,9 @@ This project utilizes machine learning techniques to predict the likelihood of b
 - [Installation](#installation)
 - [Usage](#usage)
 - [Docker](#docker)
+  - [Jupyter Notebook](#jupyter_notebook)
+  - [Flask Web Application](#flask_web_application)
+  - [Using Play with Docker](#using_play_with_docker)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
 - [License](#license)
@@ -24,12 +27,10 @@ This project utilizes machine learning techniques to predict the likelihood of b
 
 - **Data Preprocessing**: Cleaning and preparing data for machine learning models.
 - **Modeling**: Logistic Regression, SVM, and Random Forest models.
-- **Evaluation**:
-  - ***Metrics***: Accuracy, precision, recall, and F1-score.
-  - ***Confusion Matrix***: Visual representation of the performance of the classification model.
-  - ***ROC Curve***: Receiver Operating Characteristic curve to evaluate the model's ability to distinguish between classes.
+- **Evaluation**: Accuracy, precision, recall, F1-score, confusion matrix, ROC curve.
 - **Prediction**: Predicting the likelihood of breast cancer.
 - **Dockerized Environment**: Consistent setup using Docker.
+- **Flask Web Application**: API or web interface, deployed in production using Docker.
 
 # Environment Details
 
@@ -61,62 +62,65 @@ pip install -r requirements.txt
 If you don't have pip installed, you can follow the instructions [here](https://pip.pypa.io/en/stable/installation/) to install it.
 
 # Usage
+After installing the necessary dependencies, you can run the Jupyter Notebook to explore the code, run experiments, and view the results.
 
 ### Running Jupyter Notebook
 
+To start the Jupyter Notebook server, run the following command:
 ```bash
 jupyter notebook notebooks/breast_cancer_prediction.ipynb
 ```
+This command will start the Jupyter Notebook server and open a new tab in your web browser where you can interact with the notebook.
 
 # Docker
 
-## Prerequisites
-A [Play with Docker](https://labs.play-with-docker.com/) account. No local Docker installation required.
+## Jupyter Notebook
+Run the Jupyter Notebook:
 
-## Steps to Run with Play with Docker
-You have two options to run the project using Docker:
+- **Option 1: Build Locally**
 
-### Option 1: Build Locally
+```bash
+docker build -t breast-cancer-prediction .
+docker run -p 8888:8888 breast-cancer-prediction
+```
 
-1. **Start a New Session**: Go to [Play with Docker](https://labs.play-with-docker.com/) and click "Start".
+- **Option 2: Pull from Docker Hub**
 
-2. **Add a New Instance**: Click "ADD NEW INSTANCE" to open a terminal.
-   
-3. **Clone the Repository**: 
+```bash
+docker pull ilagri/breast-cancer-prediction:latest
+docker run -p 8888:8888 ilagri/breast-cancer-prediction:latest
+```
+
+Access the notebook at http://localhost:8888.
+
+## Flask Web Application
+Run the Flask app:
+
+- **Option 1: Build Locally**
+
+```bash
+cd flask_app
+docker build -t flask-app .
+docker run -p 5000:5000 flask-app
+```
+
+- **Option 2: Pull from Docker Hub**
+
+```bash
+docker pull ilagri/flask-app:latest
+docker run -p 5000:5000 ilagri/flask-app:latest
+```
+
+Access the web app at http://localhost:5000.
+
+## Using Play with Docker
+1. Start a New Session on [Play with Docker]() and add an instance.
+2. Clone the Repo:
 ```bash
 git clone https://github.com/Ilagri/Breast-cancer-prediction.git
 cd Breast-cancer-prediction
 ```
-
-4. **Build the Docker Image**: 
-```bash
-docker build -t breast-cancer-prediction .
-```
-
-5. **Run the Container**: 
-```bash
-docker run -p 8888:8888 breast-cancer-prediction
-```
-
-6. **Access Jupyter Notebook**:
-Click the 8888 link in [Play with Docker](https://labs.play-with-docker.com/) to open the notebook interface. Use the token from the terminal if prompted.
-
-### Option 2: Pull from Docker Hub
-
-1. **Start a New Session**: Go to [Play with Docker](https://labs.play-with-docker.com/) and click "Start".
-
-2. **Add a New Instance**: Click "ADD NEW INSTANCE" to open a terminal.
-   
-3. **Pull the Docker Image**:
-```bash
-docker pull ilagri/breast-cancer-prediction:latest
-```
-4. **Run the Container**:
-```bash
-docker run -p 8888:8888 ilagri/breast-cancer-prediction:latest
-```
-5. **Access Jupyter Notebook**:
-Click the 8888 link in [Play with Docker](https://labs.play-with-docker.com/) to open the notebook interface. Use the token from the terminal if prompted.
+3. Build / Pull and Run the Docker container as described above.
 
 # Project Structure
 ```bash
@@ -158,9 +162,5 @@ This project is licensed under the MIT License - see the [LICENCE](https://githu
 
 # Acknowledgements
 
-- **Dataset:** The Breast Cancer Wisconsin (Diagnostic) Dataset by Dr. William H. Wolberg is available through the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29).
-***Citation:*** W. H. Wolberg, W. N. Street, and O. L. Mangasarian. (1992). "Breast Cancer Wisconsin (Diagnostic) Data Set".
-  
+- **Dataset:** The Breast Cancer Wisconsin (Diagnostic) Dataset was created by Dr. William H. Wolberg and is available from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29). 
 - **Mentorship and Feedback:** Special thanks to Dr. Veronica Maidel for her invaluable feedback and mentoring.
-  
-- **Tools and Libraries**: Thanks to the open-source community.
