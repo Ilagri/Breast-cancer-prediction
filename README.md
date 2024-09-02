@@ -20,7 +20,7 @@ This project utilizes machine learning techniques to predict the likelihood of b
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
-## Features
+# Features
 
 - **Data Preprocessing**: Cleaning and preparing data for machine learning models.
 - **Modeling**: Logistic Regression, SVM, and Random Forest models.
@@ -31,7 +31,7 @@ This project utilizes machine learning techniques to predict the likelihood of b
 - **Prediction**: Predicting the likelihood of breast cancer.
 - **Dockerized Environment**: Consistent setup using Docker.
 
-## Environment Details
+# Environment Details
 
 - **Python Version**: 3.10.12
 - **Libraries**:
@@ -41,7 +41,7 @@ This project utilizes machine learning techniques to predict the likelihood of b
   - `scikit-learn`: 1.3.2
   - `ucimlrepo`
 
-## Installation
+# Installation
 
 To get started with this project, clone the repository and install the necessary dependencies.
 
@@ -62,7 +62,7 @@ pip install -r requirements.txt
 
 If you don't have pip installed, you can follow the instructions [here](https://pip.pypa.io/en/stable/installation/) to install it.
 
-## Usage
+# Usage
 
 ### Running Jupyter Notebook
 
@@ -70,12 +70,12 @@ If you don't have pip installed, you can follow the instructions [here](https://
 jupyter notebook notebooks/breast_cancer_prediction.ipynb
 ```
 
-### Docker
+# Docker
 
-#### Prerequisites
+### Prerequisites
 A [Play with Docker](https://labs.play-with-docker.com/) account. No local Docker installation required.
 
-#### Steps to Run with Play with Docker
+### Steps to Run with Play with Docker
 
 1. **Start a New Session**: Go to [Play with Docker](https://labs.play-with-docker.com/) and click "Start".
 
@@ -102,7 +102,7 @@ docker run -p 8888:8888 breast-cancer-prediction
 - Enter the Jupyter token from the terminal.
 - Navigate to breast_cancer_prediction.ipynb to start working.
 
-## Project Structure
+# Project Structure
 ```bash
 Breast-cancer-prediction/
 ├── notebooks/                    # Jupyter notebooks
@@ -112,7 +112,7 @@ Breast-cancer-prediction/
 └── README.md                     # Project documentation
 ```
 
-## Contributing
+# Contributing
 Contributions are welcome! Please follow these steps:
 
 1. **Fork the repository** on GitHub.
@@ -136,10 +136,10 @@ Contributions are welcome! Please follow these steps:
 
 6. **Open a pull request** on GitHub.
 
-## License
+# License
 This project is licensed under the MIT License - see the [LICENCE](https://github.com/Ilagri/Breast-cancer-prediction/blob/main/LICENSE) file for details.
 
-## Acknowledgements
+# Acknowledgements
 
 - **Dataset:** The Breast Cancer Wisconsin (Diagnostic) Dataset by Dr. William H. Wolberg is available through the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29).
 ***Citation:*** W. H. Wolberg, W. N. Street, and O. L. Mangasarian. (1992). "Breast Cancer Wisconsin (Diagnostic) Data Set".
