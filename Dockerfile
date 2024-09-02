@@ -11,8 +11,9 @@ COPY notebooks/breast_cancer_prediction.ipynb .
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Clean up pip cache
-RUN rm -rf /root/.cache/pip -v
+# Clean up pip cache in the jovyan user's home directory
+USER jovyan
+RUN rm -rf /home/jovyan/.cache/pip
 
 # Expose the port Jupyter Notebook will run on
 EXPOSE 8888
