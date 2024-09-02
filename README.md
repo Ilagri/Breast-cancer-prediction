@@ -46,7 +46,6 @@ This project utilizes machine learning techniques to predict the likelihood of b
 To get started with this project, clone the repository and install the necessary dependencies.
 
 ### Clone the Repository
-
 ```bash
 git clone https://github.com/Ilagri/Breast-cancer-prediction.git
 cd Breast-cancer-prediction
@@ -55,7 +54,6 @@ cd Breast-cancer-prediction
 ### Install Dependencies
 
 This project relies on Python and several libraries. You can install the dependencies using pip:
-
 ```bash
 pip install -r requirements.txt
 ```
@@ -74,6 +72,7 @@ jupyter notebook notebooks/breast_cancer_prediction.ipynb
 
 ### Prerequisites
 A [Play with Docker](https://labs.play-with-docker.com/) account. No local Docker installation required.
+
 
 ### Steps to Run with Play with Docker
 
@@ -121,19 +120,16 @@ Contributions are welcome! Please follow these steps:
   ```bash
   git checkout -b feature-name
   ```
-
 3. **Make your changes**.
    
 4. **Commit your changes**:
   ```bash
   git commit -m 'Add some feature'
   ```
-
 5. **Push to the branch**:
   ```bash
   git push origin feature-name
   ```
-
 6. **Open a pull request** on GitHub.
 
 # License
