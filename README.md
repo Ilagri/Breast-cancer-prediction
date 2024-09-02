@@ -11,15 +11,17 @@ This project uses machine learning to predict breast cancer likelihood based on 
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
-- [Environment Details](#environment-details)
 - [Installation](#installation)
 - [Usage](#usage)
+  - [Running the Jupyter Notebook](#running_jupyter_notebook)
+  - [Running the Flask Web Application](#running_flask_web_application)
 - [Docker](#docker)
   - [Jupyter Notebook](#jupyter_notebook)
   - [Flask Web Application](#flask_web_application)
   - [Using Play with Docker](#using_play_with_docker)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
+- [Environment Details](#environment-details)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
@@ -31,34 +33,6 @@ This project uses machine learning to predict breast cancer likelihood based on 
 - **Prediction**: Predicting the likelihood of breast cancer.
 - **Dockerized Environment**: Consistent setup using Docker.
 - **Flask Web Application**: API or web interface, deployed in production using Docker.
-
-# Environment Details
-
-- **Python Version**: 3.10.12
-- **Libraries**:
-  - `numpy`: 1.26.4
-  - `pandas`: 2.1.4
-  - `seaborn`: 0.13.1
-  - `scikit-learn`: 1.3.2
-  - `ucimlrepo`
-
-# Project Structure
-```bash
-Breast-cancer-prediction/
-├── notebooks/                    # Jupyter notebooks
-│   └── breast_cancer_prediction.ipynb
-├── flask_app/                    # Flask app directory
-│   ├── data/                     # Dataset directory
-│   │   └── dataset.csv           # The dataset used for training and evaluation
-│   ├── app.py                    # Flask application
-│   ├── templates/                # HTML templates for Flask
-│   ├── model.pkl                 # Pre-trained machine learning model
-│   ├── Dockerfile                # Docker configuration for Flask app
-│   └── requirements.txt          # Python dependencies for Flask app
-├── Dockerfile                    # Docker configuration for Jupyter Notebook
-├── requirements.txt              # Python dependencies for Jupyter Notebook
-└── README.md                     # Project documentation
-```
 
 # Installation
 
@@ -79,18 +53,46 @@ pip install -r requirements.txt
 
 If you don't have pip installed, you can follow the instructions [here](https://pip.pypa.io/en/stable/installation/) to install it.
 
+# Project Structure
+```bash
+Breast-cancer-prediction/
+├── notebooks/                    # Jupyter notebooks
+│   └── breast_cancer_prediction.ipynb
+├── flask_app/                    # Flask app directory
+│   ├── data/                     # Dataset directory
+│   │   └── dataset.csv           # The dataset used for training and evaluation
+│   ├── app.py                    # Flask application
+│   ├── templates/                # HTML templates for Flask
+│   ├── model.pkl                 # Pre-trained machine learning model
+│   ├── Dockerfile                # Docker configuration for Flask app
+│   └── requirements.txt          # Python dependencies for Flask app
+├── Dockerfile                    # Docker configuration for Jupyter Notebook
+├── requirements.txt              # Python dependencies for Jupyter Notebook
+└── README.md                     # Project documentation
+```
+
 # Usage
 After installing the necessary dependencies, you can run the Jupyter Notebook to explore the code, run experiments, and view the results.
 
-### Running Jupyter Notebook
-
-To start the Jupyter Notebook server, run the following command:
+### Running the Jupyter Notebook
+The Jupyter Notebook is used for developing and evaluating the machine learning model.
+Run the Jupyter Notebook Server:
 ```bash
 jupyter notebook notebooks/breast_cancer_prediction.ipynb
 ```
 This command will start the Jupyter Notebook server and open a new tab in your web browser where you can interact with the notebook.
 
+### Running the Flask Web Application
+The Flask web application serves the model as an API or web interface.
+
+```bash
+cd flask_app
+flask run
+```
+Access the Web Application: Open your browser and navigate to http://localhost:5000 to interact with the web app.
+
 # Docker
+You can run the Jupyter Notebook using Docker either by building the image locally or by pulling the image from Docker Hub.
 
 ## Jupyter Notebook
 Run the Jupyter Notebook:
@@ -129,8 +131,6 @@ docker pull ilagri/flask-app:latest
 docker run -p 5000:5000 ilagri/flask-app:latest
 ```
 
-Access the web app at http://localhost:5000.
-
 ## Using Play with Docker
 1. Start a New Session on [Play with Docker](https://labs.play-with-docker.com/) and add an instance.
 2. Clone the Repo:
@@ -138,7 +138,7 @@ Access the web app at http://localhost:5000.
 git clone https://github.com/Ilagri/Breast-cancer-prediction.git
 cd Breast-cancer-prediction
 ```
-3. Build / Pull and Run the Docker container as described above.
+3. Build and Run the Docker container as described above.
 
 
 # Contributing
@@ -162,6 +162,16 @@ Contributions are welcome! Please follow these steps:
   ```
 6. **Open a pull request** on GitHub.
 
+# Environment Details
+
+- **Python Version**: 3.10.12
+- **Libraries**:
+  - `numpy`: 1.26.4
+  - `pandas`: 2.1.4
+  - `seaborn`: 0.13.1
+  - `scikit-learn`: 1.3.2
+  - `ucimlrepo`
+
 # License
 This project is licensed under the MIT License - see the [LICENCE](https://github.com/Ilagri/Breast-cancer-prediction/blob/main/LICENSE) file for details.
 
@@ -169,3 +179,4 @@ This project is licensed under the MIT License - see the [LICENCE](https://githu
 
 - **Dataset:** The Breast Cancer Wisconsin (Diagnostic) Dataset was created by Dr. William H. Wolberg and is available from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29). 
 - **Mentorship and Feedback:** Special thanks to Dr. Veronica Maidel for her invaluable feedback and mentoring.
+
