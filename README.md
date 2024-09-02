@@ -14,9 +14,6 @@ This project utilizes machine learning techniques to predict the likelihood of b
 - [Installation](#installation)
 - [Usage](#usage)
 - [Docker](#docker)
-  - [Prerequisites](#prerequisites)
-  - [Steps to Run with Docker](#steps-to-run-with-docker)
-  - [Pull from Docker Hub](#pull-from-docker-hub)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
 - [License](#license)
@@ -32,6 +29,16 @@ This project utilizes machine learning techniques to predict the likelihood of b
   - ***ROC Curve***: Receiver Operating Characteristic curve to evaluate the model's ability to distinguish between classes.
 - **Prediction**: Predicting the likelihood of breast cancer.
 - **Dockerized Environment**: Consistent setup using Docker.
+
+## Environment Details
+
+- **Python Version**: 3.10.12
+- **Libraries**:
+  - `numpy`: 1.26.4
+  - `pandas`: 2.1.4
+  - `seaborn`: 0.13.1
+  - `scikit-learn`: 1.3.2
+  - `ucimlrepo`
 
 ## Installation
 
