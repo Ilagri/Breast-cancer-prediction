@@ -1,5 +1,8 @@
-# Breast Cancer Prediction (In progress)
-This project uses machine learning techniques to predict breast cancer based on a dataset of features extracted from medical imaging. The project includes a Jupyter Notebook that details the data preprocessing, model training, evaluation, and predictions.
+# Breast Cancer Prediction
+
+**Status: In Progress** 🚧
+
+This project is currently under development. Contributions and feedback are welcome!
 
 # Overview
 
