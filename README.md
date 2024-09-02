@@ -42,6 +42,24 @@ This project uses machine learning to predict breast cancer likelihood based on 
   - `scikit-learn`: 1.3.2
   - `ucimlrepo`
 
+# Project Structure
+```bash
+Breast-cancer-prediction/
+├── data/                         # Dataset directory
+│   └── dataset.csv               # The dataset used for training and evaluation
+├── notebooks/                    # Jupyter notebooks
+│   └── breast_cancer_prediction.ipynb
+├── flask_app/                    # Flask app directory
+│   ├── app.py                    # Flask application
+│   ├── templates/                # HTML templates for Flask
+│   ├── model.pkl                 # Pre-trained machine learning model
+│   ├── Dockerfile                # Docker configuration for Flask app
+│   └── requirements.txt          # Python dependencies for Flask app
+├── Dockerfile                    # Docker configuration for Jupyter Notebook
+├── requirements.txt              # Python dependencies for Jupyter Notebook
+└── README.md                     # Project documentation
+```
+
 # Installation
 
 To get started with this project, clone the repository and install the necessary dependencies.
@@ -122,19 +140,6 @@ cd Breast-cancer-prediction
 ```
 3. Build / Pull and Run the Docker container as described above.
 
-# Project Structure
-```bash
-Breast-cancer-prediction/
-├── notebooks/                    # Jupyter notebooks
-│   └── breast_cancer_prediction.ipynb
-├── flask_app/                    # Flask app directory
-│   ├── app.py                    # Flask application
-│   ├── Dockerfile                # Docker configuration for Flask app
-│   └── requirements.txt          # Python dependencies for Flask app
-├── Dockerfile                    # Docker configuration for Jupyter Notebook
-├── requirements.txt              # Python dependencies for Jupyter Notebook
-└── README.md                     # Project documentation
-```
 
 # Contributing
 Contributions are welcome! Please follow these steps:
