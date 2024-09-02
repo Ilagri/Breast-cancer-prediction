@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Load the pre-trained model and dataset
 model = joblib.load('model.pkl')  # Assuming you saved your model as model.pkl
-data = pd.read_csv('data/dataset.csv')  # Assuming your dataset is stored in data/dataset.csv
+data = pd.read_csv('data/breast-cancer-wisconsin_dataset.csv')  # Assuming your dataset is stored in data/dataset.csv
 
 @app.route('/')
 def home():
