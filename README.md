@@ -45,11 +45,11 @@ This project uses machine learning to predict breast cancer likelihood based on 
 # Project Structure
 ```bash
 Breast-cancer-prediction/
-├── data/                         # Dataset directory
-│   └── dataset.csv               # The dataset used for training and evaluation
 ├── notebooks/                    # Jupyter notebooks
 │   └── breast_cancer_prediction.ipynb
 ├── flask_app/                    # Flask app directory
+│   ├── data/                     # Dataset directory
+│   │   └── dataset.csv           # The dataset used for training and evaluation
 │   ├── app.py                    # Flask application
 │   ├── templates/                # HTML templates for Flask
 │   ├── model.pkl                 # Pre-trained machine learning model
