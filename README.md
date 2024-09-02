@@ -73,12 +73,14 @@ jupyter notebook notebooks/breast_cancer_prediction.ipynb
 ### Prerequisites
 A [Play with Docker](https://labs.play-with-docker.com/) account. No local Docker installation required.
 
-
 ### Steps to Run with Play with Docker
+You have two options to run the project using Docker:
+
+####Option 1: Build Locally
 
 1. **Start a New Session**: Go to [Play with Docker](https://labs.play-with-docker.com/) and click "Start".
 
-2. **Add a New Instance**: Click "ADD NEW INSTANCE".
+2. **Add a New Instance**: Click "ADD NEW INSTANCE" to open a terminal.
    
 3. **Clone the Repository**: 
 ```bash
@@ -91,15 +93,30 @@ cd Breast-cancer-prediction
 docker build -t breast-cancer-prediction .
 ```
 
-5. **Run the Docker Container**: 
+5. **Run the Container**: 
 ```bash
 docker run -p 8888:8888 breast-cancer-prediction
 ```
 
 6. **Access Jupyter Notebook**:
-- Click on the 8888 link in [Play with Docker](https://labs.play-with-docker.com/).
-- Enter the Jupyter token from the terminal.
-- Navigate to breast_cancer_prediction.ipynb to start working.
+Click the 8888 link in [Play with Docker](https://labs.play-with-docker.com/) to open the notebook interface. Use the token from the terminal if prompted.
+
+####Option 2: Pull from Docker Hub
+
+1. **Start a New Session**: Go to [Play with Docker](https://labs.play-with-docker.com/) and click "Start".
+
+2. **Add a New Instance**: Click "ADD NEW INSTANCE" to open a terminal.
+   
+3. **Pull the Docker Image**:
+```bash
+docker pull ilagri/breast-cancer-prediction:latest
+```
+4. **Run the Container**:
+```bash
+docker run -p 8888:8888 ilagri/breast-cancer-prediction:latest
+```
+5. **Access Jupyter Notebook**:
+Click the 8888 link in [Play with Docker](https://labs.play-with-docker.com/) to open the notebook interface. Use the token from the terminal if prompted.
 
 # Project Structure
 ```bash
