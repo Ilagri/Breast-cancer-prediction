@@ -112,7 +112,7 @@ Contributions are welcome! Please follow these steps to contribute:
 6. ***Open a pull request***: Go to your forked repository on GitHub, click on the "Pull Request" button, and provide a description of your changes.
 
 ## License
-This project is licensed under the MIT License - see the LICENSE [LICENCE](https://github.com/Ilagri/Breast-cancer-prediction/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENCE](https://github.com/Ilagri/Breast-cancer-prediction/blob/main/LICENSE) file for details.
 
 ## Acknowledgements
 
