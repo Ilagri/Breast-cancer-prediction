@@ -123,8 +123,12 @@ Click the 8888 link in [Play with Docker](https://labs.play-with-docker.com/) to
 Breast-cancer-prediction/
 ├── notebooks/                    # Jupyter notebooks
 │   └── breast_cancer_prediction.ipynb
-├── Dockerfile                    # Docker configuration
-├── requirements.txt              # Python dependencies
+├── flask_app/                    # Flask app directory
+│   ├── app.py                    # Flask application
+│   ├── Dockerfile                # Docker configuration for Flask app
+│   └── requirements.txt          # Python dependencies for Flask app
+├── Dockerfile                    # Docker configuration for Jupyter Notebook
+├── requirements.txt              # Python dependencies for Jupyter Notebook
 └── README.md                     # Project documentation
 ```
 
