@@ -11,6 +11,7 @@ This project utilizes machine learning techniques to predict the likelihood of b
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
+- [Environment Details](#environment-details)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Docker](#docker)
