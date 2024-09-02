@@ -68,22 +68,37 @@ This command will start the Jupyter Notebook server and open a new tab in your w
 To simplify running the project and avoid dependency issues, you can use [Play with Docker](https://labs.play-with-docker.com/).
 
 ### Prerequisites
-Ensure you have a Play with Docker account. No local Docker installation is necessary.
+Ensure you have a [Play with Docker](https://labs.play-with-docker.com/) account. No local Docker installation is necessary.
 
 ### Steps to Run with Play with Docker
 
-#### 1. Build the Docker Image
-Build the Docker image using the provided Dockerfile:
+#### 1. Start a New Session
+Go to [Play with Docker](https://labs.play-with-docker.com/) and start a new session by clicking "Start".
 
+#### 2. Add a New Instance
+Once your session has started, add a new instance by clicking on the "ADD NEW INSTANCE" button. This will create a new terminal instance where you can run Docker commands.
+
+#### 3. Clone the Repository
+In the Play with Docker terminal, clone the repository and navigate to the correct directory:
+```bash
+git clone https://github.com/Ilagri/Breast-cancer-prediction.git
+cd Breast-cancer-prediction
+```
+#### 4. Build the Docker Image
+Build the Docker image using the provided Dockerfile:
 ```bash
 docker build -t breast-cancer-prediction .
 ```
-#### 2. Run the Docker Container
+#### 5. Run the Docker Container
+Start the Docker container, mapping the container's port to the local machine:
 ```bash
 docker run -p 8888:8888 breast-cancer-prediction
 ```
-#### 3. Access Jupyter Notebook
-Open your browser and navigate to http://localhost:8888. You should see the Jupyter Notebook interface where you can navigate to and open the breast_cancer_prediction.ipynb file.
+#### 6. Access Jupyter Notebook
+- In Play with Docker, once the container is running, you'll see a 8888 link next to the instance name in the interface.
+- Click on the 8888 link. This will open a new browser tab where you'll be prompted to insert the Jupyter token.
+- The token can be found in the terminal output where you started the Docker container. Copy the token and paste it into the prompt in the new tab.
+- Once you've entered the token, you will access the Jupyter Notebook interface. Navigate to the breast_cancer_prediction.ipynb file to start working with the notebook.
 
 ## Project Structure
 ```bash
