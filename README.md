@@ -114,7 +114,7 @@ docker run -p 5000:5000 ilagri/flask-app:latest
 Access the web app at http://localhost:5000.
 
 ## Using Play with Docker
-1. Start a New Session on [Play with Docker]() and add an instance.
+1. Start a New Session on [Play with Docker](https://labs.play-with-docker.com/) and add an instance.
 2. Clone the Repo:
 ```bash
 git clone https://github.com/Ilagri/Breast-cancer-prediction.git
