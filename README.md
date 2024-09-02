@@ -49,7 +49,7 @@ This project relies on Python and several libraries. You can install the depende
 pip install -r requirements.txt
 ```
 
-If you don't have pip installed, you can follow the instructions here (https://pip.pypa.io/en/stable/installation/) to install it.
+If you don't have pip installed, you can follow the instructions [here](https://pip.pypa.io/en/stable/installation/) to install it.
 
 ## Usage
 
@@ -65,7 +65,7 @@ jupyter notebook notebooks/breast_cancer_prediction.ipynb
 This command will start the Jupyter Notebook server and open a new tab in your web browser where you can interact with the notebook.
 
 ### Docker
-To simplify running the project and avoid dependency issues, you can use Play with Docker [Play with Docker](https://labs.play-with-docker.com/).
+To simplify running the project and avoid dependency issues, you can use [Play with Docker](https://labs.play-with-docker.com/).
 
 ### Prerequisites
 Ensure you have a Play with Docker account. No local Docker installation is necessary.
