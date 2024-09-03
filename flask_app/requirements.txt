@@ -3,3 +3,6 @@ werkzeug==2.0.3
 gunicorn==20.1.0
 pandas
 joblib
+sklearn
+numpy
+seaborn
