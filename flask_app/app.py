@@ -24,12 +24,14 @@ def predict():
     if row_index < 0 or row_index >= len(X_test):
         row_index = 0  # Default to the first row if out of bounds
     
-    prepared_data = X_test.iloc[row_index].values.reshape(1, -1)
+    # Prepare the data by selecting the row and converting it into a DataFrame with the same column names
+    prepared_data = pd.DataFrame([X_test.iloc[row_index].values], columns=X_test.columns)
     
     # Make the prediction
     prediction = model.predict(prepared_data)[0]
     
     return render_template('predict.html', title='Prediction', prediction=prediction, row_index=row_index)
+
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')
