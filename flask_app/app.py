@@ -12,19 +12,26 @@ X_test = pd.read_csv('data/X_test.csv')
 
 @app.route('/')
 def home():
-    return render_template('home.html', title='Breast Cancer Prediction')
+    # Pass the maximum index to the template for validation
+    return render_template('home.html', title='Breast Cancer Prediction', max_index=len(X_test)-1)
 
 @app.route('/predict', methods=['GET'])
 def predict():
-    # Pick an arbitrary row from X_test, for example, the 10th row (index 9)
-    row_index = 9  # You can change this index to select a different row
+    # Get the row index from the request, default to 0 if not provided
+    row_index = int(request.args.get('row_index', 0))
+    
+    # Ensure row_index is within bounds
+    if row_index < 0 or row_index >= len(X_test):
+        row_index = 0  # Default to the first row if out of bounds
+    
     prepared_data = X_test.iloc[row_index].values.reshape(1, -1)
     
     # Make the prediction
     prediction = model.predict(prepared_data)[0]
     
-    return render_template('predict.html', title='Prediction', prediction=prediction)
+    return render_template('predict.html', title='Prediction', prediction=prediction, row_index=row_index)
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')
+
 
