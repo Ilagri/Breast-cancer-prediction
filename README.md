@@ -6,7 +6,7 @@ This project is currently under development. Contributions and feedback are welc
 
 # Overview
 
-This project uses machine learning to predict breast cancer likelihood based on features from medical imaging. It includes a Jupyter Notebook for model development and a Flask web application for serving the model as an API or web interface.
+This repository demonstrates a machine learning approach to predict breast cancer likelihood based on features derived from medical imaging. It includes a Jupyter Notebook for model development and evaluation, as well as a Flask web application that serves the model through a user-friendly interface. The Flask app is containerized using Docker, enabling easy deployment.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -32,7 +32,7 @@ This project uses machine learning to predict breast cancer likelihood based on 
 - **Evaluation**: Accuracy, precision, recall, F1-score, confusion matrix, ROC curve.
 - **Prediction**: Predicting the likelihood of breast cancer.
 - **Dockerized Environment**: Consistent setup using Docker.
-- **Flask Web Application**: API or web interface, deployed in production using Docker.
+- **Flask Web Application**: A web interface for breast cancer prediction, containerized using Docker for easy deployment.
 
 # Installation
 
@@ -60,7 +60,7 @@ Breast-cancer-prediction/
 │   └── breast_cancer_prediction.ipynb
 ├── flask_app/                    # Flask app directory
 │   ├── data/                     # Dataset directory
-│   │   └── dataset.csv           # The dataset used for training and evaluation
+│   │   └── dataset.csv           # The dataset used for prediction
 │   ├── app.py                    # Flask application
 │   ├── templates/                # HTML templates for Flask
 │   ├── model.pkl                 # Pre-trained machine learning model
