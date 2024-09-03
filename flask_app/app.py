@@ -14,10 +14,13 @@ def home():
 
 @app.route('/predict', methods=['GET'])
 def predict():
-    # Here, you would prepare the data and make predictions.
-    # For demonstration, let's assume you're predicting on the first row of the dataset:
-    prediction = model.predict([data.iloc[0]])  # Replace with actual data preparation logic
-
+    # Ensure you only select the features used during training
+    features = data.drop(columns=['ID', 'Diagnosis'])  # Drop any non-feature columns
+    prepared_data = features.iloc[0].values.reshape(1, -1)  # Prepare the first row for prediction
+    
+    # Make the prediction
+    prediction = model.predict(prepared_data)  # Replace with actual data preparation logic
+    
     return render_template('predict.html', title='Prediction', prediction=prediction)
 
 if __name__ == "__main__":
