@@ -11,11 +11,11 @@ This repository demonstrates a machine learning approach to predict breast cance
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-  - [Running the Jupyter Notebook](#running_jupyter_notebook)
-  - [Running the Flask Web Application](#running_flask_web_application)
-- [Docker](#docker)
+- [Installation and Usage](#installation_and_usage)
+  - [Docker](#docker)
+    - [Running the Jupyter Notebook](#running_jupyter_notebook)
+    - [Running the Flask Web Application](#running_flask_web_application)
+  - [Local Installation] (#local_Installation)
   - [Jupyter Notebook](#jupyter_notebook)
   - [Flask Web Application](#flask_web_application)
   - [Using Play with Docker](#using_play_with_docker)
@@ -27,23 +27,63 @@ This repository demonstrates a machine learning approach to predict breast cance
 
 # Features
 
-- **Data Preprocessing**: Cleaning and preparing data for machine learning models.
-- **Modeling**: Logistic Regression, SVM, and Random Forest models.
-- **Evaluation**: Accuracy, precision, recall, F1-score, confusion matrix, ROC curve.
-- **Prediction**: Predicting the likelihood of breast cancer.
-- **Dockerized Environment**: Consistent setup using Docker.
-- **Flask Web Application**: A web interface for breast cancer prediction, containerized using Docker for easy deployment.
+- **Jupyter Notebook**: Includes data preprocessing (cleaning and preparing data for machine learning models), modeling (Logistic Regression, SVM, and Random Forest models), evaluation (accuracy, precision, recall, F1-score, confusion matrix, ROC curve), and prediction (predicting the likelihood of breast cancer).
+- **Flask Web Application**: A web interface for breast cancer prediction, allowing users to interact with the model.
+- **Dockerized Environment**: Both the Jupyter Notebook and the web application are containerized using Docker, ensuring consistent setup and easy deployment across different environments.
 
-# Installation
 
-To get started with this project, clone the repository and install the necessary dependencies.
+# Installation and Usage
 
-### Clone the Repository
+To get started, clone the repository and choose how you want to run the Jupyter Notebook and Flask web application—either by installing the necessary dependencies locally or by using Docker.
+
+## Option 1: Using Play with Docker
+If you prefer an easy, browser-based solution, you can use [Play with Docker](https://labs.play-with-docker.com/).
+You can run both the Jupyter Notebook and Flask web application using [Play with Docker](https://labs.play-with-docker.com/), either by building the images locally or by pulling them from Docker Hub.
+
+1. Start a New Session on [Play with Docker](https://labs.play-with-docker.com/) and add an instance.
+2. Clone the repository:
 ```bash
 git clone https://github.com/Ilagri/Breast-cancer-prediction.git
 cd Breast-cancer-prediction
 ```
+3. Build and run the Docker containers as described below.
 
+### Running the Jupyter Notebook
+
+- **Option 1: Build Locally**
+
+```bash
+docker build -t breast-cancer-prediction .
+docker run -p 8888:8888 breast-cancer-prediction
+```
+
+- **Option 2: Pull from Docker Hub**
+
+```bash
+docker pull ilagri/breast-cancer-prediction:latest
+docker run -p 8888:8888 ilagri/breast-cancer-prediction:latest
+```
+
+Access the notebook at http://localhost:8888.
+
+## Running the Flask Web Application
+
+- **Option 1: Build Locally**
+
+```bash
+cd flask_app
+docker build -t flask-app .
+docker run -p 5000:5000 flask-app
+```
+- **Option 2: Pull from Docker Hub**
+
+```bash
+docker pull ilagri/flask-app:latest
+docker run -p 5000:5000 ilagri/flask-app:latest
+```
+Access the Web Application: Open your browser and navigate to http://localhost:5000 to interact with the web app.
+
+   
 ### Install Dependencies
 
 This project relies on Python and several libraries. You can install the dependencies using pip:
@@ -70,97 +110,6 @@ Breast-cancer-prediction/
 ├── requirements.txt              # Python dependencies for Jupyter Notebook
 └── README.md                     # Project documentation
 ```
-
-# Usage
-After installing the necessary dependencies, you can run the Jupyter Notebook to explore the code, run experiments, and view the results.
-
-### Running the Jupyter Notebook
-The Jupyter Notebook is used for developing and evaluating the machine learning model.
-Run the Jupyter Notebook Server:
-```bash
-jupyter notebook notebooks/breast_cancer_prediction.ipynb
-```
-This command will start the Jupyter Notebook server and open a new tab in your web browser where you can interact with the notebook.
-
-### Running the Flask Web Application
-The Flask web application serves the model as an API or web interface.
-
-```bash
-cd flask_app
-flask run
-```
-Access the Web Application: Open your browser and navigate to http://localhost:5000 to interact with the web app.
-
-# Docker
-You can run the Jupyter Notebook using Docker either by building the image locally or by pulling the image from Docker Hub.
-
-## Jupyter Notebook
-Run the Jupyter Notebook:
-
-- **Option 1: Build Locally**
-
-```bash
-docker build -t breast-cancer-prediction .
-docker run -p 8888:8888 breast-cancer-prediction
-```
-
-- **Option 2: Pull from Docker Hub**
-
-```bash
-docker pull ilagri/breast-cancer-prediction:latest
-docker run -p 8888:8888 ilagri/breast-cancer-prediction:latest
-```
-
-Access the notebook at http://localhost:8888.
-
-## Flask Web Application
-Run the Flask app:
-
-- **Option 1: Build Locally**
-
-```bash
-cd flask_app
-docker build -t flask-app .
-docker run -p 5000:5000 flask-app
-```
-
-- **Option 2: Pull from Docker Hub**
-
-```bash
-docker pull ilagri/flask-app:latest
-docker run -p 5000:5000 ilagri/flask-app:latest
-```
-
-## Using Play with Docker
-1. Start a New Session on [Play with Docker](https://labs.play-with-docker.com/) and add an instance.
-2. Clone the Repo:
-```bash
-git clone https://github.com/Ilagri/Breast-cancer-prediction.git
-cd Breast-cancer-prediction
-```
-3. Build and Run the Docker container as described above.
-
-
-# Contributing
-Contributions are welcome! Please follow these steps:
-
-1. **Fork the repository** on GitHub.
-   
-2. **Create a new branch**:
-  ```bash
-  git checkout -b feature-name
-  ```
-3. **Make your changes**.
-   
-4. **Commit your changes**:
-  ```bash
-  git commit -m 'Add some feature'
-  ```
-5. **Push to the branch**:
-  ```bash
-  git push origin feature-name
-  ```
-6. **Open a pull request** on GitHub.
 
 # Environment Details
 
