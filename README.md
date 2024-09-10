@@ -15,7 +15,6 @@ This repository demonstrates a machine learning approach to predict breast cance
   - [Docker](#docker)
     - [Running the Jupyter Notebook](#running_jupyter_notebook)
     - [Running the Flask Web Application](#running_flask_web_application)
-  - [Local Installation] (#local_Installation)
   - [Jupyter Notebook](#jupyter_notebook)
   - [Flask Web Application](#flask_web_application)
   - [Using Play with Docker](#using_play_with_docker)
@@ -36,7 +35,7 @@ This repository demonstrates a machine learning approach to predict breast cance
 
 To get started, clone the repository and choose how you want to run the Jupyter Notebook and Flask web application—either by installing the necessary dependencies locally or by using Docker.
 
-## Option 1: Using Play with Docker
+## Using Play with Docker
 If you prefer an easy, browser-based solution, you can use [Play with Docker](https://labs.play-with-docker.com/).
 You can run both the Jupyter Notebook and Flask web application using [Play with Docker](https://labs.play-with-docker.com/), either by building the images locally or by pulling them from Docker Hub.
 
