@@ -1,8 +1,5 @@
 # Breast Cancer Prediction
-
-**Status: In Progress** 🚧
-
-This project is currently under development. Contributions and feedback are welcome!
+Contributions and feedback are welcome!
 
 # Overview
 
