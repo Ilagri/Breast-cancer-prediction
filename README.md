@@ -1,4 +1,4 @@
-# Breast Cancer Prediction
+# Breast Cancer Tumer Classification
 Contributions and feedback are welcome!
 
 # Overview
